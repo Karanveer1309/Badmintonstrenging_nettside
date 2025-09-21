@@ -1,0 +1,178 @@
+/* Reset */
+* { margin:0; padding:0; box-sizing:border-box; }
+html, body { height:100%; }
+
+/* Farger */
+:root {
+  --green-dark: #1b4332;
+  --green-mid: #2d6a4f;
+  --gold: #d4a017;
+  --bg: #f4f6f8;
+  --card: #ffffff;
+  --text: #222;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+}
+
+/* Hero */
+.hero {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  min-height:70vh;
+  padding:2rem;
+  background:linear-gradient(rgba(27,67,50,0.75), rgba(27,67,50,0.75)),
+    url('https://images.unsplash.com/photo-1605649304239-6d1a427dbe24?ixlib=rb-4.0.3&q=80&w=1600&fit=crop') center/cover no-repeat;
+  color:#fff;
+}
+.hero-content { max-width: 800px; }
+.hero h1 { font-size:2.5rem; margin-bottom:1rem; }
+.hero p { font-size:1.2rem; margin-bottom:2rem; }
+.hero-buttons a { margin:0 .5rem; }
+
+/* Knapper */
+.btn-primary, .btn-secondary {
+  display:inline-block;
+  padding:.75rem 1.5rem;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:600;
+  transition: all .2s ease;
+}
+.btn-primary {
+  background: var(--green-dark);
+  color: #fff;
+}
+.btn-primary:hover { background: var(--green-mid); }
+.btn-secondary {
+  background: var(--gold);
+  color: #fff;
+}
+.btn-secondary:hover { background: #b8860b; }
+
+/* Seksjoner */
+section {
+  padding:4rem 2rem;
+  max-width:1100px;
+  margin:0 auto;
+  text-align:center;
+}
+h2 {
+  font-size:1.8rem;
+  margin-bottom:1.5rem;
+  color: var(--green-dark);
+}
+
+/* Hvorfor oss */
+.benefits {
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap:2rem;
+  margin-top:2rem;
+}
+.benefit {
+  background: var(--card);
+  padding:1.5rem;
+  border-radius:12px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.08);
+}
+.benefit h4 { margin-bottom:.5rem; color: var(--green-dark); }
+
+/* Priser */
+.price-grid {
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap:2rem;
+  margin-top:2rem;
+}
+.price-card {
+  background: var(--card);
+  padding:2rem;
+  border-radius:12px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.1);
+}
+.price-card h3 { color: var(--green-mid); margin-bottom:.5rem; }
+.price { margin-top:1rem; font-size:1.5rem; font-weight:700; color: var(--gold); }
+
+.extras-title { margin-top:3rem; font-size:1.4rem; color: var(--green-dark); }
+.extras-list { list-style:none; margin-top:1rem; font-size:1.1rem; }
+.extras-list li { margin:.5rem 0; }
+
+/* Kontakt */
+.contact-info {
+  margin:1.5rem 0;
+  font-size:1.1rem;
+}
+.contact-info p { margin:.5rem 0; }
+
+/* Sticky knapp */
+.sticky-book {
+  position:fixed;
+  right:1rem;
+  bottom:1rem;
+  z-index:999;
+  background: var(--green-dark);
+  color:#fff;
+  padding:.8rem 1.2rem;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:700;
+  box-shadow:0 8px 25px rgba(0,0,0,0.25);
+  transition: background .2s ease;
+}
+.sticky-book:hover { background: var(--green-mid); }
+
+/* Footer */
+footer {
+  background: var(--green-dark);
+  color:#eee;
+  text-align:center;
+  padding:1rem;
+  font-size:.9rem;
+  margin-top:2rem;
+}
+
+/* Levering */
+.delivery-grid {
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap:2rem;
+  margin-top:2rem;
+}
+.delivery-card {
+  background: var(--card);
+  padding:2rem;
+  border-radius:12px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.1);
+}
+.delivery-card h3 { color: var(--green-mid); margin-bottom:.5rem; }
+.delivery-price {
+  margin-top:1rem;
+  font-size:1.4rem;
+  font-weight:700;
+  color: var(--gold);
+}
+
+.delivery-note {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--green-dark);
+}
+.delivery-note a {
+  color: var(--green-dark);
+  text-decoration: underline;
+}
+
+
+/* Responsiv */
+@media (min-width:900px) {
+  .hero h1 { font-size:3rem; }
+  .hero p { font-size:1.3rem; }
+}
